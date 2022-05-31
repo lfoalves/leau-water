@@ -1,3 +1,26 @@
+const helloUser = document.querySelector('header h2');
+const buttonWater = document.getElementById('water');
+
+validacao()
+
+buttonWater.onclick = () => {
+    buttonWater.style.background = 'red';
+    const usuarioWater = window.prompt("Olá, qual o seu nome?");
+    localStorage.setItem('usuario', usuarioWater);
+    helloUser.innerHTML = `Olá ${usuarioWater}`;
+    atualizarPage();
+}
+
+function atualizarPage() {
+    window.location.reload();
+}
+
+function validacao() {
+    if(localStorage.usuario && localStorage.usuario !== 'null') {
+        helloUser.innerHTML = 'Olá&nbsp;' + localStorage.usuario + ',';
+    }
+}
+
 const modalTitle = document.querySelector('#modal h2');
 const inputModal = document.querySelector('.input-modal');
 console.log(inputModal);
@@ -21,10 +44,6 @@ set.onclick = (e) => {
     modal.classList.add('open');
     modalTitle.innerHTML = 'Deseja alterar a medida padrão?'
     inputModal.style.display = 'flex';
-}
-
-water.onclick = () => {
-    water.classList.toggle('moviment');
 }
 
 cCancel.onclick = () => {
