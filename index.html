@@ -48,11 +48,13 @@
     <div id="modal">
         <div class="conteudo">
             <h2>Deseja alterar a medida padrão?</h2>
-            <div class="input-modal"><input type="number" placeholder="400"><span>ml</span></div>            
-            <div class="buttons-modal">
-                <button id="cCancel">Cancelar</button>
-                <button id="cConfirm">Confirmar</button>
-            </div>
+            <form action="#">
+                <div class="input-modal"><input type="number" placeholder="400" min="100" max="20000"><span>ml</span></div>            
+                <div class="buttons-modal">
+                    <button id="cCancel">Cancelar</button>
+                    <button id="cConfirm" type="submit">Confirmar</button>
+                </div>
+            </form>
         </div>
     </div>
     
