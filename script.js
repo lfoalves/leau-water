@@ -1,15 +1,18 @@
-// window.document.body.style.background = '#000'
-
 revert.onclick = () => {
-    window.alert('Revert')
-    revert.style.backgroundColor = 'red';
+    modal.classList.add('open');
+    const open = document.getElementById('modal');
+    console.log(open)
 }
 
 set.onclick = () => {
-    window.alert('Alterar');
+    modal.classList.add('open');
 }
 
 water.onclick = () => {
-    // water.style.backgroundColor = 'green';
-    water.classList.toggle('animation');
+    water.classList.toggle('moviment');
+}
+
+cCancel.onclick = () => {
+    modal.classList.remove('open');
+    
 }
