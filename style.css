@@ -24,8 +24,6 @@ body {
     font-size: 1.6rem;
 }
 
-
-
 #app {
     width: 428px;
     height: 926px;
@@ -170,7 +168,7 @@ button:hover {
     filter: brightness(1.1);
 }
 
-/* MODAL ======================================================= */
+/* ======================================= MODAL ======================================= */
 #modal {
     display: none;
     font-family: 'Roboto', sans-serif;
@@ -184,7 +182,7 @@ button:hover {
     left: 0;
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(42, 58, 82, .7);
 
     backdrop-filter: blur(10px);
@@ -227,7 +225,7 @@ button:hover {
     font-weight: 700;
 }
 
-.input-modal input {
+#modal.open .input-modal input {
     background: none;
     border: none;
     text-indent: 20px;
@@ -237,11 +235,11 @@ button:hover {
     font-size: 1.8rem;
 }
 
-.input-modal input::placeholder {
+#modal.open .input-modal input::placeholder {
     color: rgba(255, 255, 255,.5);
 }
 
-.input-modal span {
+#modal.open .input-modal span {
     border: 1px solid #556D8F;
     height: 5.4rem;
     width: 4.4rem;
@@ -253,15 +251,15 @@ button:hover {
 }
 
 /* buttons modal */
-.buttons-modal {
+#modal.open .buttons-modal {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
 }
 
-.buttons-modal #cCancel,
-.buttons-modal #cConfirm {
+#modal.open .buttons-modal #cCancel,
+#modal.open .buttons-modal #cConfirm {
     padding: 1.6rem 1.22rem;
     color: #EFF2F6;
     text-transform: uppercase;
@@ -270,10 +268,10 @@ button:hover {
     font-weight: 700;
 }
 
-#cCancel {
+#modal.open #cCancel {
     background-color: #FF6C8B;;
 }
 
-#cConfirm {
+#modal.open #cConfirm {
     background-color: #3CBBB1;
 }

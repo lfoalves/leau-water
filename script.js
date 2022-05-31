@@ -1,10 +1,9 @@
 const helloUser = document.querySelector('header h2');
 const buttonWater = document.getElementById('water');
 
-validacao()
+validation()
 
 buttonWater.onclick = () => {
-    buttonWater.style.background = 'red';
     const usuarioWater = window.prompt("Olá, qual o seu nome?");
     localStorage.setItem('usuario', usuarioWater);
     helloUser.innerHTML = `Olá ${usuarioWater}`;
@@ -15,7 +14,7 @@ function atualizarPage() {
     window.location.reload();
 }
 
-function validacao() {
+function validation() {
     if(localStorage.usuario && localStorage.usuario !== 'null') {
         helloUser.innerHTML = 'Olá&nbsp;' + localStorage.usuario + ',';
     }
@@ -25,7 +24,7 @@ const modalTitle = document.querySelector('#modal h2');
 const inputModal = document.querySelector('.input-modal');
 console.log(inputModal);
 
-// buttons prevenção de comportamento padrão
+// buttons prevent default
 cCancel.addEventListener('click', function(e) {
     e.preventDefault();
 })
@@ -48,4 +47,9 @@ set.onclick = (e) => {
 
 cCancel.onclick = () => {
     modal.classList.remove('open');    
+}
+
+cConfirm.onclick = () => {
+    alert('Função em desenvolvimento!');
+    modal.classList.remove('open');
 }
