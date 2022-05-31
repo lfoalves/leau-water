@@ -203,7 +203,7 @@ button:hover {
 #modal.open .conteudo {
     background-color: rgb(52 73 102);
     width: 35.9rem;
-    height: 36.4rem;
+    /* height: 36.4rem; */
 
     display: flex;
     flex-direction: column;
@@ -216,6 +216,7 @@ button:hover {
 #modal.open .conteudo h2 {
     margin-bottom: 3.9rem;
     text-align: center;
+    font-weight: 300;
 }
 
 #modal.open .conteudo .input-modal {
